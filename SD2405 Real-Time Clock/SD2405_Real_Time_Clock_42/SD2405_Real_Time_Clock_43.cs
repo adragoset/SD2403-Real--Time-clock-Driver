@@ -2,6 +2,7 @@
 using Microsoft.SPOT.Hardware;
 using GTI = Gadgeteer.SocketInterfaces;
 using GTM = Gadgeteer.Modules;
+using System.Threading;
 
 namespace Gadgeteer.Modules.DFRobot
 {
@@ -43,6 +44,8 @@ namespace Gadgeteer.Modules.DFRobot
         /// </summary>
         public DateTime GetDateTime()
         {
+            int timeout = 0x10;
+
             I2CDevice.I2CWriteTransaction write = I2CDevice.CreateWriteTransaction(new byte[] {0x00});
 
             var returnedDateTime = new byte[7];
@@ -52,11 +55,21 @@ namespace Gadgeteer.Modules.DFRobot
             var readTransaction = new I2CDevice.I2CTransaction[] {write, read};
 
             // Lock the _i2C bus so multiple threads don't try to access it at the same time
-            lock (_i2C)
+            while (timeout > 0)
             {
-                // Execute the transation
-                _i2C.Execute(readTransaction);
+                if (_i2C.Execute(readTransaction) == 0)
+                {
+                    //Debug.Print("Failed to perform I2C transaction");
+                    Thread.Sleep(10);
+                    timeout--;
+                }
+                else
+                {
+                    //Debug.Print("Register value: " + RegisterValue[0].ToString());
+                    timeout = 0;
+                }
             }
+            
 
             int sec = bcdToDec(returnedDateTime[0]) & 0x7f;
             int min = bcdToDec(returnedDateTime[1]);
