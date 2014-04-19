@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- Change this whenever building a new installer.  The fourth number is ignored, so change one of the top three.
+  Otherwise, users will not be able to upgrade properly; Windows Installer will exit with an error instead of upgrading. -->
+  <!-- Also change the version numbers in Properties/AssemblyInfo.cs for each NETMF version supported -->
+  <?define ModuleSoftwareVersion = "1.0.0.0" ?>
+
+  <!-- Alternatively, to synchronize this mainboard version to a kit version, uncomment the below lines, edit the pathname
+  to point to your kit, and comment out the line above.  You also need to edit AssemblyInfo.cs.  See the kit readme.txt 
+  for more details of how and why to do this. -->
+  <!--
+  <?include $(var.SourcePath)..\..\..\..\..\Kits\DFRobot\KitName\Software\KitName\version.wxi ?>
+  <?define ModuleSoftwareVersion = "$(var.KitVersion)" ?>
+  -->
+
+  <!-- SafeModuleName should match the name printed on the module PCB, without any spaces/punctuation. -->
+  <?define SafeModuleName = "SD2405_Real_Time_Clock" ?>
+
+  <!-- SafeManufacturer should match the manufacturer name printed on the module PCB, without any spaces/punctuation. -->
+  <?define SafeManufacturer = "DFRobot" ?>
+
+  <!-- FullManufacturer can have spaces, e.g. Microsoft Research.  This shows up as the manufacturer name in add/remove programs. -->
+  <?define FullManufacturer = "DFRobot" ?>
+
+  <!-- These define which versions of NETMF are supported - comment out or delete any unsupported NETMF versions. -->
+  <?define NETMF41Supported ?>
+  <?define NETMF42Supported ?>
+
+
+  <!-- No need to change anything below this line. -->
+  <?define OutputFileName = "GTM.$(var.SafeManufacturer).$(var.SafeModuleName)"?>
+  <?define ProjectPath = "SD2405_Real_Time_Clock" ?>
+
+  <!-- These two should be copied over if upgrading from an older template -->
+  <?define guid_msi_upgrade_code =  "3c07047c-581c-4c9e-925a-ee07049e7c51" ?>
+  <?define guid_msm_package_id = "730ba0fe-7135-44fc-826c-8625fb48ec65" ?>
+
+  <?define guid_msm_comp_resources_id = "5cdb1eb9-3747-49ac-8f13-dc2a3697bcd9" ?>
+  <?define guid_msm_comp_registry_id = "cefd19cd-cab3-4e6f-a60e-22c955be3b00" ?>
+  <?define guid_msm_comp_gadgeteerhardware_id = "8812d025-caea-44f8-aee5-969cbb31fd7a"?>
+
+  <?define guid_msm_comp_files_id_41 = "5fd09946-7af1-4ac7-8175-ac35f48b6034" ?>
+  <?define guid_msm_comp_files_be_id_41 = "ab2505c0-26e1-41a2-a1b6-0b5175750a8f" ?>
+  <?define guid_msm_comp_files_le_id_41 = "7822acd5-226e-4e65-a263-6ba925e45340" ?>
+
+  <?define guid_msm_comp_files_id_42 = "25e34138-a5e5-4981-bc6c-6d604a031f2c" ?>
+  <?define guid_msm_comp_files_be_id_42 = "24beda45-dc40-48b9-b5da-9efdd12ec56e" ?>
+  <?define guid_msm_comp_files_le_id_42 = "dd675a88-5620-4d94-b886-5b41ae8cf681" ?>
+  
+</Include>
+
