@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.SPOT.Hardware;
-using GTI = Gadgeteer.Interfaces;
+using GTI = Gadgeteer.SocketInterfaces;
 using GTM = Gadgeteer.Modules;
 
 namespace Gadgeteer.Modules.DFRobot
@@ -35,7 +35,7 @@ namespace Gadgeteer.Modules.DFRobot
 
             _socket.EnsureTypeIsSupported(new char[] {'I'}, this);
 
-            _i2C = new GTI.I2CBus(_socket, SD2405Address, I2CClockRateKHz, this);
+            _i2C = GTI.I2CBusFactory.Create(_socket, SD2405Address, I2CClockRateKHz, this);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Gadgeteer.Modules.DFRobot
             lock (_i2C)
             {
                 // Execute the transation
-                _i2C.Execute(readTransaction, I2CTimeout);
+                _i2C.Execute(readTransaction);
             }
 
             int sec = bcdToDec(returnedDateTime[0]) & 0x7f;
@@ -103,7 +103,7 @@ namespace Gadgeteer.Modules.DFRobot
 
             lock (_i2C)
             {
-                _i2C.Execute(writeTransaction, I2CTimeout);
+                _i2C.Execute(writeTransaction);
             }
         }
 

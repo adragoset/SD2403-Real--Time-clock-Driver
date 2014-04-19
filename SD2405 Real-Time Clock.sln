@@ -1,56 +1,18 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD2405_Real_Time_Clock_41", "SD2405 Real-Time Clock\SD2405_Real_Time_Clock_41\SD2405_Real_Time_Clock_41.csproj", "{7E9046AA-98F4-4636-8834-A4C283E66297}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD2405_Real_Time_Clock_42", "SD2405 Real-Time Clock\SD2405_Real_Time_Clock_42\SD2405_Real_Time_Clock_42.csproj", "{F4231ADD-9A18-439A-8537-A16097AABDC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD2405_Real_Time_Clock", "SD2405 Real-Time Clock\SD2405_Real_Time_Clock\SD2405_Real_Time_Clock.csproj", "{1A8F2CB4-AB82-4751-AAF5-3350710A2225}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{359DABDF-204B-4E42-A094-5E05BFDFFF17}"
-EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs36
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SD2405\u0020Real-Time\u0020Clock\\SD2405_Real_Time_Clock\\SD2405_Real_Time_Clock.csproj
-		SccProjectName1 = SD2405\u0020Real-Time\u0020Clock/SD2405_Real_Time_Clock
-		SccLocalPath1 = SD2405\u0020Real-Time\u0020Clock\\SD2405_Real_Time_Clock
-		SccProjectUniqueName2 = SD2405\u0020Real-Time\u0020Clock\\SD2405_Real_Time_Clock_41\\SD2405_Real_Time_Clock_41.csproj
-		SccProjectName2 = SD2405\u0020Real-Time\u0020Clock/SD2405_Real_Time_Clock_41
-		SccLocalPath2 = SD2405\u0020Real-Time\u0020Clock\\SD2405_Real_Time_Clock_41
-		SccProjectUniqueName3 = SD2405\u0020Real-Time\u0020Clock\\SD2405_Real_Time_Clock_42\\SD2405_Real_Time_Clock_42.csproj
-		SccProjectName3 = SD2405\u0020Real-Time\u0020Clock/SD2405_Real_Time_Clock_42
-		SccLocalPath3 = SD2405\u0020Real-Time\u0020Clock\\SD2405_Real_Time_Clock_42
-		SccProjectUniqueName4 = TestApp\\TestApp.csproj
-		SccProjectName4 = TestApp
-		SccLocalPath4 = TestApp
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7E9046AA-98F4-4636-8834-A4C283E66297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E9046AA-98F4-4636-8834-A4C283E66297}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E9046AA-98F4-4636-8834-A4C283E66297}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E9046AA-98F4-4636-8834-A4C283E66297}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4231ADD-9A18-439A-8537-A16097AABDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4231ADD-9A18-439A-8537-A16097AABDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4231ADD-9A18-439A-8537-A16097AABDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4231ADD-9A18-439A-8537-A16097AABDC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A8F2CB4-AB82-4751-AAF5-3350710A2225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A8F2CB4-AB82-4751-AAF5-3350710A2225}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A8F2CB4-AB82-4751-AAF5-3350710A2225}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A8F2CB4-AB82-4751-AAF5-3350710A2225}.Release|Any CPU.Build.0 = Release|Any CPU
-		{359DABDF-204B-4E42-A094-5E05BFDFFF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{359DABDF-204B-4E42-A094-5E05BFDFFF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{359DABDF-204B-4E42-A094-5E05BFDFFF17}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{359DABDF-204B-4E42-A094-5E05BFDFFF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{359DABDF-204B-4E42-A094-5E05BFDFFF17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{359DABDF-204B-4E42-A094-5E05BFDFFF17}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
